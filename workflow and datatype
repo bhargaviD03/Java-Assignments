@@ -1,0 +1,89 @@
+1. Primitive and Non-Primitive Data Types in Java
+
+Primitive Data Types
+
+Primitive data types are the basic built-in data types in Java. They store actual values directly in memory. Java has 8 primitive types
+
+byte , 1 byte , byte b = 10; 
+short, 2 bytes,  short s = 1000;
+int,  4 bytes,  int x = 42; 
+long,  8 bytes , long l = 100000L;
+float,  4 bytes,  float f = 3.14f; 
+double,  8 bytes,  double d = 3.14159; 
+char,  2 bytes,  char c = 'A';
+boolean , 1 bit,  boolean flag = true; 
+
+Non-Primitive Data Types
+Non-primitive data types store references to objects. 
+Examples: String, arrays, classes, interfaces. 
+
+int a = 10;
+int b = a;   
+b = 20;        
+
+int[] arr1 = {1, 2, 3};
+int[] arr2 = arr1;   
+arr2[0] = 99;       
+
+
+2. Internal Workflow of a Java Program
+
+
+Step 1 — Writing Source Code:
+
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+
+Step 2 — Compilation:
+Bytecode is platform-independent.
+
+Step 3 — Class Loading
+
+Step 4 — Bytecode Verification
+
+Step 5 — Execution
+
+Step 6 — Output
+
+Flow Diagram:
+
+Hello.java → [javac] → Hello.class (bytecode) → [Class Loader]
+→ [Bytecode Verifier] → [Execution Engine: Interpreter + JIT] → Output
+
+
+3. JDK, JRE, and JVM
+
+JVM (Java Virtual Machine)
+The JVM is the engine that executes Java bytecode. It provides platform independence, memory management, garbage collection, and security. Each operating system has its own JVM implementation, but all JVMs understand the same bytecode.
+
+JRE (Java Runtime Environment)
+The JRE = It provides everything needed to run a Java application, but it cannot compile Java code.
+
+JDK (Java Development Kit)
+The JDK = It provides everything needed to write, compile, and run Java programs.
+
+Role of Each Component
+- JDK → used by developers to compile and build Java programs
+- JRE → provides the environment and libraries to run Java programs
+- JVM → actually executes the bytecode
+
+
+4. JIT (Just-In-Time) Compiler
+
+The JIT compiler is a part of the JVM's Execution Engine. It then compiles  bytecode into native machine code at runtime, so the CPU can execute it directly.
+
+How JIT Improves Performance
+1. Removes interpretation overhead
+2. Applies optimizations
+3. Caches compiled code
+
+
+5. Relationship Between JDK, JRE, JVM, and JIT
+
+The JDK contains the JRE, which contains the JVM, and the JIT compiler operates inside the JVM's execution engine. Together, the JDK compiles Java code, the JRE provides the runtime environment and libraries, the JVM executes the bytecode, and the JIT converts hot bytecode into fast native machine code for better performance.
+
+
+
